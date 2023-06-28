@@ -53,7 +53,7 @@ def download_installer():
     
     if response_msg.status_code == requests.codes.ok:
         file_content = response_msg.content
-        file_content.writer()
+        print(file_content)
     return
 
 def installer_ok(installer_data, expected_sha256):
@@ -69,6 +69,7 @@ def installer_ok(installer_data, expected_sha256):
     """    
     # TODO: Step 3
     # Hint: See example code in lab instructions entitled "Computing the Hash Value of a Response Message Body"
+
     return
 
 def save_installer(installer_data):
