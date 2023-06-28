@@ -48,6 +48,12 @@ def download_installer():
     """
     # TODO: Step 2
     # Hint: See example code in lab instructions entitled "Downloading a Binary File"
+    file_url = 'http://download.videolan.org/pub/videolan/vlc/3.0.17.4/win64/'
+    response_msg = requests.get(file_url)
+    
+    if response_msg.status_code == requests.codes.ok:
+        file_content = response_msg.content
+        file_content.writer()
     return
 
 def installer_ok(installer_data, expected_sha256):
